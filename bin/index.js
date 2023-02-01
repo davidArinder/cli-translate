@@ -1,6 +1,7 @@
 #! /usr/bin/env node
 const yargs = require("yargs");
 const utils = require("./utils.js");
+const translate = require(); // get a translation api
 
 const usage = "\nUsage: translate <lang_name> sentence to be translated";
 
@@ -25,3 +26,22 @@ if (yargs.argv.l == true || yargs.argv.languages == true) {
   utils.showAll();
   return;
 }
+
+if (yargs.argv._[0]) {
+  const language = yargs.argv._[0].toLowerCase();
+  language = utils.parseLanguage(language);
+}
+
+if (sentence === "") {
+  console.error("\nNo sentence was entered.");
+  console.log("Enter translate --help to get started.\n");
+  return;
+}
+
+// translate(sentence, { to: language })
+//   .then((res) => {
+//     console.log("\n" + "\n" + res.text + "\n" + "\n");
+//   })
+//   .catch((err) => {
+//     console.log(err);
+//   });
