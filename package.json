@@ -10,5 +10,8 @@
     "translate": "./bin/index.js"
   },
   "author": "David Arinder",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "yargs": "^17.6.2"
+  }
 }
