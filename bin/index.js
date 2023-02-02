@@ -1,7 +1,7 @@
 #! /usr/bin/env node
 const yargs = require("yargs");
 const utils = require("./utils.js");
-const translate = require(); // get a translation api
+// const translate = require(); // get a translation api
 
 const usage = "\nUsage: translate <lang_name> sentence to be translated";
 

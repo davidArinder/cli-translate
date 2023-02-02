@@ -1,5 +1,7 @@
 const languages = require("./languageMap");
 
+const usage = "\nUsage: translate <lang_name> sentence to be translated";
+
 const parseSentence = (words) => {
   let sentence = "";
   for (let i = 0; i < words.length; i++) {
